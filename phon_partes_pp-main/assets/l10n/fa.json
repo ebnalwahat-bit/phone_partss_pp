@@ -1,0 +1,15 @@
+{
+  "app_title": "قطع تلفن",
+  "inventory": "موجودی",
+  "settings": "تنظیمات",
+  "add_part": "اضافه کردن قطعه",
+  "edit_part": "ویرایش قطعه",
+  "delete": "حذف",
+  "save": "ذخیره",
+  "name": "نام",
+  "quantity": "تعداد",
+  "barcode": "بارکد",
+  "search": "جستجو",
+  "dark_mode": "حالت تاریک",
+  "language": "زبان"
+}
