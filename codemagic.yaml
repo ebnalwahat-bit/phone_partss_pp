@@ -1,0 +1,111 @@
+workflows:
+  android-workflow:
+    name: Android Build
+    instance_type: mac_mini_m1
+    max_build_duration: 120
+    environment:
+      flutter: stable
+      xcode: latest
+      android_sdk: 33
+      java: 11
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch:
+        include_patterns:
+          - main
+          - develop
+    scripts:
+      - name: Get Flutter packages
+        script: |
+          cd phone_partss_pp-main
+          flutter pub get
+      - name: Build APK
+        script: |
+          cd phone_partss_pp-main
+          flutter build apk --release
+      - name: Build AppBundle
+        script: |
+          cd phone_partss_pp-main
+          flutter build appbundle --release
+    artifacts:
+      - phone_partss_pp-main/build/app/outputs/apk/release/app-release.apk
+      - phone_partss_pp-main/build/app/outputs/bundle/release/app-release.aab
+    publishing:
+      email:
+        recipients:
+          - ebnalwahat.bit@gmail.com
+        notify:
+          success: true
+          failure: true
+
+  ios-workflow:
+    name: iOS Build
+    instance_type: mac_mini_m1
+    max_build_duration: 120
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch:
+        include_patterns:
+          - main
+          - develop
+    scripts:
+      - name: Get Flutter packages
+        script: |
+          cd phone_partss_pp-main
+          flutter pub get
+      - name: Build iOS
+        script: |
+          cd phone_partss_pp-main
+          flutter build ios --release --no-codesign
+    artifacts:
+      - phone_partss_pp-main/build/ios/iphoneos/Runner.app
+    publishing:
+      email:
+        recipients:
+          - ebnalwahat.bit@gmail.com
+        notify:
+          success: true
+          failure: true
+
+  test-workflow:
+    name: Test & Analysis
+    instance_type: mac_mini_m1
+    max_build_duration: 60
+    environment:
+      flutter: stable
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch:
+        include_patterns:
+          - main
+          - develop
+    scripts:
+      - name: Get Flutter packages
+        script: |
+          cd phone_partss_pp-main
+          flutter pub get
+      - name: Run Tests
+        script: |
+          cd phone_partss_pp-main
+          flutter test
+      - name: Analyze Code
+        script: |
+          cd phone_partss_pp-main
+          flutter analyze
+    publishing:
+      email:
+        recipients:
+          - ebnalwahat.bit@gmail.com
+        notify:
+          success: true
+          failure: true
