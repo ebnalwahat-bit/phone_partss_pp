@@ -26,7 +26,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/i10n/
+    - assets/l10n/
   fonts:
     - family: Roboto
       fonts:
