@@ -1,21 +1,2 @@
-workflows:
-  flutter-android:
-    name: Flutter Android Build
-    environment:
-      flutter: stable
-    scripts:
-      - flutter pub get
-      - flutter build apk --release -t lib/main.dart
-    artifacts:
-      - buworkflows:
-  flutter-android:
-    name: Flutter Android Build
-    environment:
-      flutter: stable
-      java: 17
-    scripts:
-      - flutter clean
-      - flutter pub get
-      - flutter build apk --release -t lib/main.dart
-    artifacts:
-      - build/app/outputs/flutter-apk/*.apkild/app/outputs/flutter-apk/app-release.apk
+# تم نقل هذا الملف إلى codemagic.yaml في جذر المستودع
+# يرجى استخدام الملف في المسار الجذر بدلاً من هذا الملف
