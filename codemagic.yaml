@@ -4,6 +4,7 @@ workflows:
     environment:
       flutter: stable
       java: 17
+    working_directory: phon_partes_pp-main
     scripts:
       - flutter clean
       - flutter pub get
