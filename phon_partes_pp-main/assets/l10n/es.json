@@ -1,0 +1,15 @@
+{
+  "app_title": "Repuestos de Teléfonos",
+  "inventory": "Inventario",
+  "settings": "Ajustes",
+  "search": "Buscar...",
+  "quantity": "Cantidad",
+  "name": "Nombre",
+  "barcode": "Código de barras",
+  "add_part": "Agregar pieza",
+  "edit_part": "Editar pieza",
+  "save": "Guardar",
+  "delete": "Eliminar",
+  "dark_mode": "Modo oscuro",
+  "language": "Idioma"
+}

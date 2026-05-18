@@ -1,0 +1,15 @@
+{
+  "app_title": "قطع غيار الهواتف",
+  "inventory": "المخزون",
+  "settings": "الإعدادات",
+  "search": "بحث...",
+  "quantity": "الكمية",
+  "name": "الاسم",
+  "barcode": "الباركود",
+  "add_part": "إضافة قطعة",
+  "edit_part": "تعديل قطعة",
+  "save": "حفظ",
+  "delete": "حذف",
+  "dark_mode": "الوضع الليلي",
+  "language": "اللغة"
+}

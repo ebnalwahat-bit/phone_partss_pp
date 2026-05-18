@@ -1,0 +1,15 @@
+{
+  "app_title": "Phone Parts",
+  "inventory": "Inventory",
+  "settings": "Settings",
+  "search": "Search...",
+  "quantity": "Quantity",
+  "name": "Name",
+  "barcode": "Barcode",
+  "add_part": "Add Part",
+  "edit_part": "Edit Part",
+  "save": "Save",
+  "delete": "Delete",
+  "dark_mode": "Dark Mode",
+  "language": "Language"
+}

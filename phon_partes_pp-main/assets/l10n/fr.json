@@ -1,0 +1,15 @@
+{
+  "app_title": "Pièces de Téléphone",
+  "inventory": "Inventaire",
+  "settings": "Paramètres",
+  "search": "Rechercher...",
+  "quantity": "Quantité",
+  "name": "Nom",
+  "barcode": "Code-barres",
+  "add_part": "Ajouter une pièce",
+  "edit_part": "Modifier la pièce",
+  "save": "Enregistrer",
+  "delete": "Supprimer",
+  "dark_mode": "Mode nuit",
+  "language": "Langue"
+}

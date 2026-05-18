@@ -1,0 +1,15 @@
+{
+  "app_title": "手机配件",
+  "inventory": "库存",
+  "settings": "设置",
+  "search": "搜索...",
+  "quantity": "数量",
+  "name": "名称",
+  "barcode": "条形码",
+  "add_part": "添加配件",
+  "edit_part": "编辑配件",
+  "save": "保存",
+  "delete": "删除",
+  "dark_mode": "深色模式",
+  "language": "语言"
+}

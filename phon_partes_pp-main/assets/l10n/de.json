@@ -1,0 +1,15 @@
+{
+  "app_title": "Handy-Ersatzteile",
+  "inventory": "Lagerbestand",
+  "settings": "Einstellungen",
+  "search": "Suchen...",
+  "quantity": "Menge",
+  "name": "Name",
+  "barcode": "Strichcode",
+  "add_part": "Teil hinzufügen",
+  "edit_part": "Teil bearbeiten",
+  "save": "Speichern",
+  "delete": "Löschen",
+  "dark_mode": "Dunkelmodus",
+  "language": "Sprache"
+}
