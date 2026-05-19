@@ -1,35 +1,38 @@
-name: phone_parts_app
-description: تطبيق لتصنيف وإدارة قطع غيار الهواتف
-publish_to: 'none'
-version: 1.0.0+1
+import 'package:flutter/material.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
 
-environment:
-  sdk: '>=3.0.0 <4.0.0'
-  flutter: '>=3.0.0'
+class ScanScreen extends StatefulWidget {
+  const ScanScreen({super.key});
 
-dependencies:
-  flutter:
-    sdk: flutter
-  sqflite: ^2.3.0
-  path: ^1.8.0
-  provider: ^6.0.5
-  shared_preferences: ^2.2.0
-  mobile_scanner: ^3.5.0
-  intl: ^0.18.0
-  cupertino_icons: ^1.0.0
+  @override
+  State<ScanScreen> createState() => _ScanScreenState();
+}
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^3.0.0
+class _ScanScreenState extends State<ScanScreen> {
+  bool _scanned = false;
 
-flutter:
-  uses-material-design: true
-  assets:
-    - assets/l10n/
-  fonts:
-    - family: Roboto
-      fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
-        - asset: assets/fonts/Roboto-Bold.ttf
-          weight: 700
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Barcode Scanner'),
+      ),
+      body: MobileScanner(
+        onDetect: (capture) {
+          if (_scanned) return;
+
+          final List<Barcode> barcodes = capture.barcodes;
+
+          if (barcodes.isNotEmpty) {
+            final String code =
+                barcodes.first.rawValue ?? '';
+
+            _scanned = true;
+
+            Navigator.pop(context, code);
+          }
+        },
+      ),
+    );
+  }
+}
