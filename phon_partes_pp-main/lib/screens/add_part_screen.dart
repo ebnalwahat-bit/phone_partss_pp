@@ -3,7 +3,7 @@ import 'package:mobile_scanner/mobile_scanner.dart';
 import '../services/local_db.dart';
 import '../models/part.dart';
 import '../services/localization_service.dart';
-
+import 'scan_screen.dart';
 class AddPartScreen extends StatefulWidget {
   @override
   State<AddPartScreen> createState() => _AddPartScreenState();
